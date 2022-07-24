@@ -12,7 +12,8 @@ pipeline {
 		
         stage('Build') {
             steps {   
-		sh 'mvn -B -DskipTests clean install package'   
+		  
+		sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'    
             }
         }
 				
