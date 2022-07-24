@@ -1,21 +1,21 @@
 pipeline {
 	agent any
 	stages {
-		stage('One') {
+		stage('git checkout') {
 			steps {
 				git credentialsId: 'suryatinku', url: 'https://github.com/suryatinku/surya.git'
 			}
 		}
 		
-		stage('Two') {
+		stage('Build') {
 			steps {
-				input('Do you want to proceed?')
+				sh 'mvn clean package'
 			}
 		}
 		
 		stage('Build') {
             steps {
-                sh 'mkdir csd'
+                sh 'mkdir csdd'
             }
         }
         
