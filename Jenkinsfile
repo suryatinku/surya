@@ -11,8 +11,9 @@ pipeline {
 		}
 		
         stage('Build') {
-            steps {
+            steps {    
                 sh 'mvn -B -DskipTests clean install'
+		sh 'mvn spring-boot:run'    
             }
         }
 				
