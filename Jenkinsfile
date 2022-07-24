@@ -15,7 +15,7 @@ pipeline {
 		
 		stage('Build') {
             steps {
-                sh 'mkdir cd'
+                sh 'mkdir csd'
             }
         }
         
