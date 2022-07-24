@@ -7,34 +7,11 @@ pipeline {
 			}
 		}
 		
-		stage('Buildcode') {
-			steps {
-				sh 'mvn clean package'
-			}
-		}
-		
-		stage('Build') {
+        stage('Build') {
             steps {
-                sh 'mkdir csdd'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
-        
-        stage('Test') {
-            steps {
-                sh 'cd cd'
-            }
-        }
-        
-        stage('Check') {
-            steps {
-                sh 'touch ss'
-            }
-        }      
-		
-		stage('Five') {
-			steps {
-				echo 'Finished'
-			}
-		}		
+				
 	}
 }
