@@ -1,3 +1,2 @@
 FROM tomcat
-RUN cd target
-COPY ./*.war /usr/local/tomcat/webapps/
+COPY /var/lib/jenkins/workspace/java-application/target/SpringBootMavenExample-1.3.5.RELEASE.war /usr/local/tomcat/webapps/
