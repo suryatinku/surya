@@ -16,6 +16,13 @@ pipeline {
 		sh 'mvn install'       
             }
         }
+        stage('Build') { 
+            steps { 
+                script{
+                 app = docker.build("underwater")
+                }
+            }
+        }		
 				
 	}
 }
