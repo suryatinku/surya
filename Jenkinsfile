@@ -12,7 +12,7 @@ pipeline {
 		
         stage('Build') {
             steps {    
-		sh 'mvn clean'           
+		sh 'mvn -version'           
             }
         }
         stage('Build-dockerfile') { 
