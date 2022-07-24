@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {   
 		  
-		sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'    
+		sh 'mvn clean package'    
             }
         }
 				
