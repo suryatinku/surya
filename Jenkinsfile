@@ -14,6 +14,7 @@ pipeline {
             steps {   
 		sh 'mvn clean'  
 		sh 'mvn install'       
+		sh 'sudo su'    
             }
         }
         stage('Build-dockerfile') { 
