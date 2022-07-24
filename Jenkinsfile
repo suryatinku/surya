@@ -16,7 +16,7 @@ pipeline {
 		sh 'mvn install'       
             }
         }
-        stage('Build') { 
+        stage('Build-dockerfile') { 
             steps { 
                 script{
                  app = docker.build("underwater")
