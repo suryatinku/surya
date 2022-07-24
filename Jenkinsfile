@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('One') {
 			steps {
-				git 'https://github.com/suryatinku/surya.git'
+				git credentialsId: 'suryatinku', url: 'https://github.com/suryatinku/surya.git'
 			}
 		}
 		
