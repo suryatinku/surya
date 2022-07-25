@@ -16,12 +16,10 @@ pipeline {
                 }
             }
         }
-    stage('Docker Push') {
+    stage('Docker deploy') {
       agent any
       steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
-          sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh 'docker push suryatink/springboot:latest'
+          sh 'docker run -itd -p 80:8080 suryatink/springboot:latest'
         }
       }
     }		
