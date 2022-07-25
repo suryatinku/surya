@@ -22,7 +22,7 @@ pipeline {
           sh 'docker run -itd -p 80:8080 suryatink/springboot:latest'
         }
       }
-    }		
+    	
 				
 	}
 }
