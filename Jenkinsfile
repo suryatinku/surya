@@ -19,7 +19,7 @@ pipeline {
     stage('Docker deploy') {
       agent any
       steps {
-          sh 'docker run -itd -p 80:8080 suryatink/springboot:latest'
+          sh 'docker run -itd -p 80:8081 suryatink/springboot:latest'
         }
       }
     	
